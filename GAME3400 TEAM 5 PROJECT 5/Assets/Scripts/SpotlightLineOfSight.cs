@@ -42,6 +42,8 @@ public class SpotlightLineOfSight : MonoBehaviour
 
     private bool IsPlayerInLight()
     {
+        Debug.Log("In cone: " + this.IsPlayerInCone() + ", In light: " + this.IsPlayerInLineOfSight());
+        Debug.DrawLine(this.transform.position, this.player.transform.position);
         return this.IsPlayerInCone() && this.IsPlayerInLineOfSight();
     }
 
@@ -64,7 +66,6 @@ public class SpotlightLineOfSight : MonoBehaviour
 
     private void BroadcastPlayerSpotted()
     {
-        Debug.Log("SPOTTED");
         if (PlayerIsInLight != null)
         {
             PlayerIsInLight.Invoke(this.gameObject);
