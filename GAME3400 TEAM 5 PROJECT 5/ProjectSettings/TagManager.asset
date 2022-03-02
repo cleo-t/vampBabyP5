@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LightObject
   - Ladder
+  - SceneFade
   layers:
   - Default
   - TransparentFX
