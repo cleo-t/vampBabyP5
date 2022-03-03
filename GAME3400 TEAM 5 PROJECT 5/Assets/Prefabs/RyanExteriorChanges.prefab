@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7330854469730149100}
   - component: {fileID: 6360694260344857849}
+  - component: {fileID: 8614659953850680025}
   m_Layer: 0
   m_Name: mysterious attic dark light? (1)
   m_TagString: Untagged
@@ -93,6 +94,19 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &8614659953850680025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629686106471996368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae390756a0f21514b8619a93e58b9d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
 --- !u!1 &7505730202520768736
 GameObject:
   m_ObjectHideFlags: 0
