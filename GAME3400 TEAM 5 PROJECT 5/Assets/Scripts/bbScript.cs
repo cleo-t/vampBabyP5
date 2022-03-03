@@ -10,6 +10,8 @@ public class bbScript : MonoBehaviour
     private Vector2 offsetFromStep;
     [SerializeField]
     private float speed = 2;
+    [SerializeField]
+    private AudioClip heheClip;
 
     private int reachedSteps;
     private int targetStep;
@@ -33,6 +35,7 @@ public class bbScript : MonoBehaviour
             if (this.steps[this.targetStep + 1].SafeToAdvance())
             {
                 this.targetStep++;
+                AudioSource.PlayClipAtPoint(this.heheClip, this.transform.position, 0.5f);
             }   
         }
     }
