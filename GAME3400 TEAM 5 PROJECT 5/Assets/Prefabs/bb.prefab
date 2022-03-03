@@ -358,6 +358,7 @@ MonoBehaviour:
   steps: []
   offsetFromStep: {x: 0, y: 0}
   speed: 2
+  heheClip: {fileID: 8300000, guid: 7347dcb5dea4147e59a69fd6b82ea7bc, type: 3}
 --- !u!136 &6149786360922752381
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -159,6 +159,8 @@ MonoBehaviour:
   lightOn: 1
   player: {fileID: 0}
   light: {fileID: 5988865695033523281}
+  pickUpClip: {fileID: 8300000, guid: aa98c5fcda18d4f7da2600a479331aa0, type: 3}
+  putDownClip: {fileID: 8300000, guid: a9d610b74ccc14098bda75ad6c8a9447, type: 3}
 --- !u!1001 &8297158619622670371
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class FoodCollider : MonoBehaviour
     private GameObject foodObject;
     [SerializeField]
     private string bbTag = "Baby";
+    [SerializeField]
+    private AudioClip foodClip;
 
     private bool hit;
 
@@ -24,6 +26,7 @@ public class FoodCollider : MonoBehaviour
         if (!this.hit && other.CompareTag(this.bbTag))
         {
             this.hit = true;
+            AudioSource.PlayClipAtPoint(this.foodClip, this.foodObject.transform.position);
             Destroy(this.foodObject);
             this.BroadcastFoodCollected();
         }

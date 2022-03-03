@@ -8,6 +8,8 @@ public class EndGoal : MonoBehaviour
     private string targetScene = "EndOfLevel";
     [SerializeField]
     private string playerTag = "Player";
+    [SerializeField]
+    private AudioClip portalEnterClip;
 
     private bool open;
 
@@ -26,6 +28,7 @@ public class EndGoal : MonoBehaviour
     {
         if (this.open && other.CompareTag(this.playerTag))
         {
+            AudioSource.PlayClipAtPoint(this.portalEnterClip, this.transform.position);
             ManageScenes.instance.SwitchScene(this.targetScene);
         }
     }
