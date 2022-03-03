@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class EndGoal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private string targetScene = "EndOfLevel";
+    [SerializeField]
+    private string playerTag = "Player";
+
+    private bool open;
+
+    private void Start()
     {
-        
+        this.open = false;
+        FoodCollider.OnFoodCollected += this.OnFoodCollected;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnFoodCollected()
     {
-        
+        this.open = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (this.open && other.CompareTag(this.playerTag))
+        {
+            ManageScenes.instance.SwitchScene(this.targetScene);
+        }
     }
 }
