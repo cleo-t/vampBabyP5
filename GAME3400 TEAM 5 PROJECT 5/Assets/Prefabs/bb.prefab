@@ -319,6 +319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264224904067849152}
   - component: {fileID: 4189014827599635120}
+  - component: {fileID: 6149786360922752381}
   m_Layer: 0
   m_Name: bb
   m_TagString: Baby
@@ -356,6 +357,20 @@ MonoBehaviour:
   steps: []
   offsetFromStep: {x: 0, y: 0}
   speed: 2
+--- !u!136 &6149786360922752381
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264224904067849156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.24
+  m_Height: 0.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.33, z: 0}
 --- !u!1 &1347058067233264516
 GameObject:
   m_ObjectHideFlags: 0
