@@ -6960,7 +6960,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mirror
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3861915068496640094, guid: cd46fc079f4753144963a708ef0624fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cd46fc079f4753144963a708ef0624fa, type: 3}
 --- !u!4 &6588972037676164476 stripped
 Transform:
