@@ -8,6 +8,8 @@ public class MoveDoorOnSwitch : MonoBehaviour
     private float arcDegrees = 90;
     [SerializeField]
     private float moveDuration = 0.75f;
+    [SerializeField]
+    private AudioClip doorSlamClip;
 
     void Start()
     {
@@ -32,5 +34,6 @@ public class MoveDoorOnSwitch : MonoBehaviour
             yield return null;
         }
         this.transform.localRotation *= Quaternion.AngleAxis(this.arcDegrees - degreesMoved, Vector3.up);
+        AudioSource.PlayClipAtPoint(this.doorSlamClip, this.transform.position);
     }
 }
