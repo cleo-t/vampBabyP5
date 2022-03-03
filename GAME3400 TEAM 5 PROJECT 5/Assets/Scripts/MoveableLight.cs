@@ -15,16 +15,20 @@ public class MoveableLight : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        light.SetActive(lightOn);
+    }
+
+    void Start()
+    {
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStuff>();
-            
         }
-        light.SetActive(lightOn);
     }
 
     private void OnMouseDown()
     {
+        
         if (lightOn && !player.hasLight)
         {
             lightOn = !lightOn;
