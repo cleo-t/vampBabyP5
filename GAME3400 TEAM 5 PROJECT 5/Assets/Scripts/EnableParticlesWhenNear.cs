@@ -15,12 +15,17 @@ public class EnableParticlesWhenNear : MonoBehaviour
     private float maxRate;
     private float maxSize;
 
+    private bool foodCollected;
+
     void Start()
     {
         this.ps = this.GetComponent<ParticleSystem>();
         this.player = GameObject.FindGameObjectWithTag(this.playerTag);
         this.maxRate = this.ps.emission.rateOverTime.constant;
         this.maxSize = this.ps.main.startSize.constant;
+
+        this.foodCollected = false;
+        FoodCollider.OnFoodCollected += this.FoodCollected;
     }
 
     void Update()
@@ -35,11 +40,16 @@ public class EnableParticlesWhenNear : MonoBehaviour
 
     private float DistanceCoeff()
     {
-        return Mathf.Sqrt(Mathf.Max(0, 1 - ((this.DistanceToPlayer() / this.radius))));
+        return this.foodCollected ? Mathf.Sqrt(Mathf.Max(0, 1 - ((this.DistanceToPlayer() / this.radius)))) : 0;
     }
 
     private float DistanceToPlayer()
     {
         return Vector3.Distance(this.player.transform.position, this.transform.position);
+    }
+
+    private void FoodCollected()
+    {
+        this.foodCollected = true;
     }
 }
