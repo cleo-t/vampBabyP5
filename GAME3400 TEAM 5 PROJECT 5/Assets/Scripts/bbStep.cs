@@ -11,6 +11,10 @@ public class bbStep : MonoBehaviour
     {
         foreach (MoveableLight ml in this.lightsToBeOff)
         {
+            if (ml == null)
+            {
+                continue;
+            }
             if (ml.lightOn)
             {
                 return false;

@@ -7004,6 +7004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetScene: EndOfLevel
   playerTag: Player
+  portalEnterClip: {fileID: 8300000, guid: 67d4c82d8a1c34499bf77103f57e6213, type: 3}
 --- !u!1001 &4033204205021429410
 PrefabInstance:
   m_ObjectHideFlags: 0
