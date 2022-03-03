@@ -12,10 +12,18 @@ public class FoodCollider : MonoBehaviour
     [SerializeField]
     private string bbTag = "Baby";
 
+    private bool hit;
+
+    private void Start()
+    {
+        this.hit = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(this.bbTag))
+        if (!this.hit && other.CompareTag(this.bbTag))
         {
+            this.hit = true;
             Destroy(this.foodObject);
             this.BroadcastFoodCollected();
         }

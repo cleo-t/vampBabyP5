@@ -14,6 +14,7 @@ public class EndGoal : MonoBehaviour
     private void Start()
     {
         this.open = false;
+        FoodCollider.OnFoodCollected += this.OnFoodCollected;
     }
 
     private void OnFoodCollected()
