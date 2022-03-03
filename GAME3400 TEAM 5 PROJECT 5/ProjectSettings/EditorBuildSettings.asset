@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HouseGreybox.unity
+    guid: e27e2318e49a62846b9b5ecfb0935d83
+  - enabled: 1
+    path: Assets/Scenes/EndOfLevel.unity
+    guid: 9411c59b8333ecf47b5e1c5188b652bf
   m_configObjects: {}
