@@ -318,7 +318,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264224904067849152}
-  - component: {fileID: 1264224904067849155}
   - component: {fileID: 4189014827599635120}
   m_Layer: 0
   m_Name: bb
@@ -342,24 +341,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &1264224904067849155
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264224904067849156}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.7
-  m_Radius: 0.22
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.94, z: 0.12}
 --- !u!114 &4189014827599635120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333f10f56221cee48b581451d5f7a42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  steps: []
+  offsetFromStep: {x: 0, y: 0}
+  speed: 2
 --- !u!1 &1347058067233264516
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +981,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4564353116253848704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.042, y: 0.2, z: 0.173}
+  m_LocalPosition: {x: -0.042, y: -0.385, z: 0.173}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1684663964552834335}
